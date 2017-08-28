@@ -1,0 +1,9 @@
+# create this file and set your custom variables
+AWS-DockerSwarm-demo$ cat ../env
+
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_DEFAULT_REGION=""
+export VPC_ID=""
+export SUBNET_ID=""
+AWS-DockerSwarm-demo$

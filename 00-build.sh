@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . ../env
+
 cd cloud-provisioning/terraform/aws
 
 packer build -machine-readable \

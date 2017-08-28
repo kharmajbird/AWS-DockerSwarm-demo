@@ -1,0 +1,11 @@
+/.idea
+/target
+/.vagrant
+/*.log
+/client/node_modules
+/client/bower_components
+/client/*.log
+/db
+/.ivy2
+/*.box
+/*.iml

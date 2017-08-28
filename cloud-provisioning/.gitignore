@@ -1,0 +1,15 @@
+/.idea
+/*.iml
+.vagrant
+/packer/*.env
+/packer/packer_cache
+secrets*
+*.tfstate.backup
+*.pem
+*.retry
+/go-demo
+/docker
+/docker*.tgz
+/terraform/do/devops21-do*
+/terraform/do/graph.png
+*.log

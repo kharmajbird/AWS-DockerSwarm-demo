@@ -6,4 +6,5 @@ export AWS_SECRET_ACCESS_KEY=""
 export AWS_DEFAULT_REGION=""
 export VPC_ID=""
 export SUBNET_ID=""
+export KEY_PATH=""
 AWS-DockerSwarm-demo$

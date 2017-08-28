@@ -11,7 +11,7 @@ resource "aws_instance" "swarm-manager" {
   key_name = "devops21"
   connection {
     user = "ubuntu"
-    private_key = "${file("devops21.pem")}"
+    private_key = "{{user `ENV KEY_PATH`}}"
   }
   provisioner "remote-exec" {
     inline = [
@@ -34,7 +34,7 @@ resource "aws_instance" "swarm-worker" {
   key_name = "devops21"
   connection {
     user = "ubuntu"
-    private_key = "${file("devops21.pem")}"
+    private_key = "{{user `ENV KEY_PATH`}}"
   }
   provisioner "remote-exec" {
     inline = [

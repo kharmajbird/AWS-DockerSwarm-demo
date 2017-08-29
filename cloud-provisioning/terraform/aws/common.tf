@@ -1,4 +1,5 @@
 resource "aws_security_group" "docker" {
+  vpc_id = "${var.vpc_id}"
   name = "docker"
   ingress {
     from_port   = 22

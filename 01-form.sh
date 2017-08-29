@@ -1,16 +1,19 @@
 #!/bin/bash
 
 . ../env
-
-export TF_VAR_swarm_ami_id=$(\
-    grep 'artifact,0,id' packer-ubuntu-docker.log \
-    cut -d, -f6| cut -d: -f2)
-
 cd cloud-provisioning/terraform/aws
 
-terraform plan && \
+export TF_VAR_swarm_ami_id=$(
+    grep 'artifact,0,id' packer-ubuntu-docker.log| \
+    cut -d, -f6| cut -d: -f2)
+
+export TF_VAR_vpc_id="$VPC_ID"
+
+
+terraform plan \
+    -var 'vpc_id=$VPC_ID' && \
 terraform graph && \
-terraform graph| dot -Tpng > graph.log
+terraform graph| dot -Tpng > ../../../graph.png
 
 
 terraform apply \

@@ -172,16 +172,15 @@ on:
     #paths-ignore:
     #  - **/README.md
 
-## Jay
-##  # triggered from another workflow for cross-workflow dependencies
-##  workflow_run:
-##    workflows:
-##      - my-other-workflow
-##    types:
-##      - completed
-##    branches:
-##      - 'releases/**'
-##      - '!releases/**-alpha'
+  # triggered from another workflow for cross-workflow dependencies
+  workflow_run:
+    workflows:
+      - my-other-workflow
+    types:
+      - completed
+    branches:
+      - 'releases/**'
+      - '!releases/**-alpha'
 
   # https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
   workflow_call:
